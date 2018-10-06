@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Hogwarts Word Guess Game</title>
+		<!-- Bootstrap library -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!-- Custom CSS file -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<!-- External js file -->
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
+		<!-- Link to google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Charmonman:400,700|MedievalSharp" rel="stylesheet">
+	</head>
+
+	<!-- The body holds the wooden desk background texture -->
+	<body id="woodTexture">
+
+		<!-- This div holds all of the game data and has a scroll image as it's background -->
+		<div id="scroll" class="container">
+
+			<!-- The jumbotron is used to organize the header text (although much of it is hidden using CSS) -->
+			<div class="jumbotron text-center mt-4">
+				<h1>HOGWARTS</h1>
+				<h2>Potions Class Register</h2>
+				<br>
+				<br>
+				<p>
+					An invisibility spell has gone badly wrong!
+				</p>
+				<p>
+					Can you guess who's in class?
+				</p>
+			
+			</div>
+
+			<!-- Single column row holds dynamic instructions and the main game area -->
+			<div class="row center-block">
+				<div class="col-sm-12 col-md-12 text-center">
+					<h2 id="startGame">Press any key to get started!</h2>
+					<br>
+					<br>
+					<h3>Pupil's last name is...</h3>
+					<br>
+					<!-- data pulled in from js -->
+					<div id="selectedPupil" class="jsText"></div>
+					<br>
+				</div>
+			</div>
+
+			<!-- Double column row holds some dynamic info, giving the users feedback -->
+			<div class="row text-center mt-4">
+				<div class="col-sm-12 col-md-6">
+					<h3>Letters Guessed</h3>
+					<!-- data pulled in from js -->
+					<div id="lettersGuessed" class="jsText">--</div>
+					<hr>
+				</div>
+
+				<div class="col-sm-12 col-md-6">
+						<h3>Number of Wins</h3>
+						<!-- data pulled in from js -->
+						<div id="wins" class="jsText">0</div>
+						<hr>
+					</div>
+					
+			</div>	
+			
+			<!-- Double column row holds the remaining dynamic info, giving the users feedback -->
+			<div class="row center-block text-center mt-4">
+				<div class="col-sm-12 col-md-6">
+					<h3>Remaining Guesses</h3>
+					<!-- data pulled in from js -->
+					<div id="remainingGuesses" class="jsText">--</div>
+				</div>	
+					
+				<div class="col-sm-12 col-md-6">
+					<h3>Number of Losses</h3>
+					<!-- data pulled in from js -->
+					<div id="losses" class="jsText">0</div>
+				</div>
+			</div>
+
+			<!-- This footer holds an inkblot image, which is hidden (with CSS) as it threw the design off.
+			I kept it as a workaround for creating some extra space at the bottom of the page. I know this 
+			is a bit sloppy, I'll try to fix it if I don't run out of time! -->
+			<footer class="row center-block">
+				<img id="blot" src="assets/images/blot.png" width="400" height="400">
+			</footer>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,124 @@
+/*
+CSS styles for the Hogwarts Word Guess Game
+*/
+
+/* 
+------------------------
+ENTIRE PAGE
+------------------------
+*/
+
+body {
+	font-family: 'Charmonman', cursive;
+	color: #333;
+
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	color: rgba(128, 0, 0, 1);
+	font-family: 'MedievalSharp', cursive;
+	-webkit-text-stroke: 1px #8e793e;
+	font-size: 3em;
+}
+
+hr {
+	color: #666;
+	border: .5px solid #666;
+	margin: 0 130px 0 130PX;
+	/* margin-right: 130px; */
+}
+
+p {
+	color: #333;
+	font-family: 'Charmonman', cursive;
+	font-size: 1.5em;
+}
+
+
+/* 
+------------------------
+JUMBOTRON HEADER STYLING
+------------------------
+*/
+
+.jumbotron {
+	background-color: rgba(128, 0, 0, 0);
+	font-family: 'MedievalSharp', cursive;
+	color: #ad974f;
+	-webkit-text-stroke: 1px #8e793e;
+	margin-bottom: 1%;
+	margin-top: 5%;
+	padding-top: 200px;
+	padding-bottom: 2%;
+}
+
+
+/* 
+------------------------
+CLASS FOR CONTROLING THE DYNAMIC TEXT FROM JS
+------------------------
+*/
+.jsText {
+	font-size: 2em;
+}
+
+/* 
+------------------------
+IDs FOR STYLING UNIQUE IMAGES
+------------------------
+*/
+
+#woodTexture {
+	background-image: url('../images/wood.jpg');
+}
+
+#scroll {
+	background-image: url('../images/scroll.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#blot {
+	margin-bottom: 200px;
+	visibility: hidden;
+}
+
+/*
+====================
+MEDIA QUERIES
+====================
+
+/* To make the background image more responsive, I changed the width and length
+of the scroll ID and for smaller screens I took out the hr as a precation, so 
+that they don't float in odd places if the colums collaps. */
+
+/* 980px wide screen size */
+@media screen and (max-width: 980px) {
+    #scroll {
+		background-size: 740px 1200px;
+	}
+}
+
+/* 768px wide screen size */
+@media screen and (max-width: 768px) {
+	#scroll {
+		background-size: 530px 1600px;
+	}
+	hr {
+		visibility: hidden;
+	}
+}
+
+/* 640px wide screen size */
+@media screen and (max-width: 640px) {
+	#scroll {
+		background-size: 530px 1600px;
+	}
+	hr {
+		visibility: hidden;
+	}
+}
